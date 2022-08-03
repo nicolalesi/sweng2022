@@ -1,0 +1,92 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		#navbar{
+		  list-style-type: none;
+		  margin-top: -250px;
+		  margin-left:-10px;
+		  overflow: hidden;
+		  background-color: #a51b0b  ;
+		  width:200px;
+		  padding:10px;
+		  height:100vh;
+		}
+		
+		li {
+			float: left;
+			margin-top:230px;
+		}
+		
+		
+		li a {
+			display: block;
+			color: black;
+			text-align: center;
+			padding: 18px 20px;
+			text-decoration: none;
+			font-family: 'Poppins', sans-serif;
+		}
+		
+		
+		li a:hover::after{
+		  background-color: black;
+		}
+		
+		#Sedi{
+			background-color: white;
+		}
+		#container{
+			display:flex;
+		}
+		
+		#infoUni{
+			margin-left:20px;
+	}	
+		
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+	<div id="container">
+		<ul id="navbar">
+	       <li  id="Home">
+	       	<gwt:Button ui:field = "btnHome" text="   Home   "
+                 />
+	       </li>
+	       <li  id="Dipa">
+	       	<gwt:Button ui:field = "btnDip" text="Dipartimenti"
+                 />
+	       </li>
+	        <li  id="Contatti">
+	       	<gwt:Button ui:field = "btnContatti" text="Contatti"
+                 />
+	       </li>
+	        <li  id="login">
+	       	<gwt:Button ui:field = "btnLogin" text="   Login   "
+                   />
+            </li>
+	    </ul>
+	    <div id="infoUni">
+	    	<h2>La nostra storia</h2>
+	    	<p>L'Università di Bologna ha origini molto antiche che la indicano come la prima università del mondo occidentale.<br/> La sua storia si intreccia con quella di grandi personaggi che operarono nel campo della scienza e delle lettere ed è riferimento imprescindibile nel panorama della cultura europea.</p>
+	    	<h2>Sedi e strutture</h2>
+	    	<p>L’Università di Bologna si articola come Ateneo Multicampus per permettere la diffusione dell'offerta formativa e l'attivazione di una stabile attività di ricerca sul territorio. </p>
+	    	<dl id="Sedi" style="list-style-type:square">
+	    		<dt>- Campus Cesena</dt>
+	    		
+	    		<dt>- Campus Forlì</dt>
+	    		
+	    		<dt>- Campus Ravenna</dt>
+	    		
+	    		<dt>- Representacion en la Republica Argentina, Centro de Altos Estudios de la Universidad de Bologna</dt>
+	    		
+	    		<dt>- Bruxelles, New York, Shanghai</dt>
+	    		
+	    	</dl>
+	    </div>
+	   </div> 
+	    
+	</g:HTMLPanel>
+</ui:UiBinder> 

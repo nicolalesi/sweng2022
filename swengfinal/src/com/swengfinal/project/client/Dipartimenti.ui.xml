@@ -1,0 +1,79 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		li {
+		  float: left;
+		  
+		}
+		#container{
+			display:flex;
+		}
+		#elencodipa{
+			margin-left:20px;
+}	
+	</ui:style>
+	<g:HTMLPanel>
+	<div id="container">
+		<div>
+		<ul id="navbar">
+	       <li  id="Home">
+	       	<gwt:Button ui:field = "btnHome" text="Home"
+                 />
+	       </li>
+	       <li  id="Dipa">
+	       	<gwt:Button ui:field = "btnDip" text="Dipartimenti"
+                 />
+	       </li>
+	        <li  id="Contatti">
+	       	<gwt:Button ui:field = "btnContatti" text="Contatti"
+                 />
+	       </li>
+	        <li  id="login">
+	       	<gwt:Button ui:field = "btnLogin" text="Login"
+                   />
+	       </li>
+
+	    </ul>
+	    </div>
+	    <div id="elencodipa">
+	    <h2>Dipartimenti</h2>
+	    <p>I Dipartimenti sono le articolazioni organizzative dell'Ateneo per lo svolgimento delle funzioni relative alla ricerca scientifica e alle attività didattiche e formative.<br/> L'elenco riporta la nuova articolazione dei Dipartimenti, attivati in applicazione della Legge 240/2010</p>
+	    <div class="description-text">
+        	<p>Architettura - DA<br></br>Prof. Fabrizio Ivan Apollonio</p>
+        	<p>Beni culturali - DBC<br></br>Prof. Luigi Canetti</p>
+        	<p>Chimica "Giacomo Ciamician" - CHIM<br></br>Prof. Marco Lucarini</p>
+        	<p>Chimica industriale "Toso Montanari" - CHIMIND<br></br>Prof. Andrea Mazzanti</p>
+        	<p>Delle Arti - DAR<br></br>Prof. Giacomo Manzoli</p>
+        	<p>Farmacia e Biotecnologie - FaBiT<br></br>Prof. Santi Mario Spampinato</p>
+        	<p>Filologia classica e Italianistica - FICLIT<br></br>Prof. Nicola Grandi</p>
+        	<p>Filosofia e Comunicazione - FILCOM<br></br>Prof. Giovanni Matteucci</p>
+        	<p>Fisica e Astronomia “Augusto Righi” - DIFA<br></br>Prof. Andrea Cimatti</p>
+        	<p>Ingegneria civile, chimica, ambientale e dei Materiali - DICAM<br></br>Prof. Stefano Gandolfi</p>
+			<p>Ingegneria dell'Energia elettrica e dell'Informazione "Guglielmo Marconi" - DEI<br></br>Prof. Riccardo Rovatti</p>
+			<p>Ingegneria industriale - DIN<br></br>Prof. Alfredo Liverani</p>
+        	<p>Interpretazione e Traduzione - DIT<br></br>Prof.ssa Francesca Gatta</p>
+        	<p>Lingue, Letterature e Culture moderne - LILEC<br></br>Prof. Maurizio Ascari</p>
+        	<p>Matematica - MAT<br></br>Prof. Fabrizio Caselli</p>
+        	<p>Medicina specialistica, diagnostica e sperimentale - DIMES<br></br>Prof. Gianandrea Pasquinelli</p>
+        	<p>Psicologia "Renzo Canestrari" - PSI<br></br>Prof.ssa Elvira Cicognani</p>
+        	<p>Scienze aziendali - DiSA<br></br>Prof. Angelo Paletta</p>
+        	<p>Scienze biologiche, geologiche e ambientali - BiGeA<br></br>Prof. Alessandro Chiarucci</p>
+        	<p>Scienze biomediche e neuromotorie - DIBINEM<br></br>Prof.ssa Lucia Manzoli</p>
+        	<p>Scienze dell'Educazione "Giovanni Maria Bertin" - EDU<br></br>Prof. Maurizio Fabbri</p>
+        	<p>Scienze economiche - DSE<br></br>Prof. Matteo Cervellati </p>
+        	<p>Scienze giuridiche - DSG<br></br>Prof. Michele Caianiello </p>
+        	<p>Scienze mediche e chirurgiche - DIMEC<br></br>Prof. Pierluigi Viale </p>
+        	<p>Scienze mediche veterinarie - DIMEVET<br></br>Prof. Giuliano Bettini</p>
+        	<p>Scienze per la Qualità della Vita - QUVI<br></br>Prof. Claudio Stefanelli </p>
+        	<p>Scienze politiche e sociali - SPS<br></br>Prof. Filippo Andreatta</p>
+        	<p>Scienze statistiche "Paolo Fortunati" - STAT<br></br>Prof.ssa Claudia Golino</p>
+        	<p>Sociologia e Diritto dell'Economia - SDE<br></br>Prof.ssa Rosalba Lanciotti </p>
+        	<p>Storia Culture Civiltà - DiSCi<br></br>Prof.ssa Francesca Sofia</p>
+      	</div>
+      	</div>	
+      </div>	
+	    
+	</g:HTMLPanel>
+</ui:UiBinder> 

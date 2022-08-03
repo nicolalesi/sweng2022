@@ -1,0 +1,26 @@
+/* Stile generale dell'app web  */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #303030;
+}
+
+li {
+  float: left;
+}
+
+.button {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #0400ff;
+}
