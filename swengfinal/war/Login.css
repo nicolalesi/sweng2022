@@ -1,0 +1,18 @@
+#immagine{
+	padding-top:20vh;
+	background-image: url("unibo.png");
+	background-size: 82% 99%;
+	
+}
+#footer{
+	position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+
+	background-color: #B2B2B2;
+}
+
