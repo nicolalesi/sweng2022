@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		
+		li {
+		  float: left;
+		  
+		}
+		
+		#infoUser{
+	
+			margin-left:5vw;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	
+	<div id="container">
+		<ul id="navbar">
+	       <li  id="Home">
+	       	<gwt:Button ui:field = "btnHomeSegreteria" text="Home"
+                 />
+	       </li>
+	        <li  id="Pubblica Voto">
+	       	<gwt:Button ui:field = "btnPubblicaVoto" text="Pubblica Voto"
+                 />
+	       </li>
+	       <li  id="Logout">
+	       	<gwt:Button ui:field = "btnLogout" text="Logout"
+                   />
+	       </li>
+	    </ul>
+	  
+	    
+	    <div id="infoUser">
+	    <c:CellTable ui:field='cellTable'>
+		</c:CellTable>
+		
+
+	    </div>
+	   </div> 
+	    
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 
