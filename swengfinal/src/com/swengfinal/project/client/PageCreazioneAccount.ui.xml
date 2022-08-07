@@ -1,0 +1,117 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		
+		#creazioneAccount{
+			display: flex;
+			flex-direction:column;
+			background-color: #ff958f;
+    		padding: 10px;
+    		row-gap: 20px;
+    		
+
+    		border-radius:10px;
+	
+		}
+	
+		
+		#button1{
+			grid-row: 5;
+			grid-column: 2;
+		}
+
+		#containerAccount{
+			margin-left:15vw;
+		}
+		
+		#riga{
+			display:flex;
+		}
+		
+		
+	</ui:style>
+	<g:HTMLPanel>
+	<div id="container">
+		<ul id="navbar">
+	       <li  id="Home">
+	       	<gwt:Button ui:field = "btnHome" text="Home"
+                 />
+	       </li>
+	       <li  id="CreazioneAccount">
+	       	<gwt:Button ui:field = "btnCreazione" text="Creazione Account"
+                 />
+	       </li>
+	        <li  id="ModificaAccount">
+	       	<gwt:Button ui:field = "btnModifica" text="Modifica Account"
+                 />
+	       </li>
+	       <li  id="Logout">
+	       	<gwt:Button ui:field = "btnLogout" text="Logout"
+                   />
+	       </li>
+	    </ul>
+	    
+	    <div id="containerAccount">
+	    <h1>Creazione Account</h1>
+		    <div id="creazioneAccount">
+		    
+		    <div id="riga">
+		   
+		   	  <div>
+			    <label for="exampleInputPassword1" id="luogo">Luogo Nascita</label>
+			    <gwt:TextBox ui:field="txtLuogo"></gwt:TextBox>
+			  </div>	
+		       
+		       <div>
+			     <label for="exampleInputPassword1" id="tipo">Email</label>
+			    <gwt:TextBox ui:field="txtEmail"></gwt:TextBox> 
+			  </div>
+			  
+			  <div>
+			   <label for="exampleInputPassword1" >Password</label>
+			    <gwt:TextBox ui:field="txtPassword"></gwt:TextBox>
+			    </div>
+			 </div> 
+			 
+			 <div id="riga">
+			    <div>
+			     <label for="exampleInputPassword1">Data Nascita</label>
+			 	 <gwt:TextBox ui:field="txtData"></gwt:TextBox>
+			  </div>
+			  
+			  <div>
+			    <label for="exampleInputPassword1">Cognome</label>
+			    <gwt:TextBox ui:field="txtCognome"></gwt:TextBox>
+			    </div>
+			    
+			    <div>
+			    <label for="exampleInputPassword1" id="nome">Nome</label>
+			    <gwt:TextBox ui:field="txtNome"></gwt:TextBox>
+			  </div>
+			 </div>  
+			 
+			 <div id="riga">
+			  
+				  <div style="margin-left:10vw">
+				       <label for="exampleInputPassword1"  >Tipologia</label>
+				       <gwt:ListBox ui:field="menuTipo"></gwt:ListBox>
+			       </div>
+			       
+			      <div style="margin-left:20px">
+				    <gwt:Label ui:field="lblMatricola" >Matricola</gwt:Label>
+				    <gwt:TextBox ui:field="txtMatricola"></gwt:TextBox>		   
+			  	</div>
+		       
+			</div>  
+			 <div id="button1">
+			  <gwt:Button ui:field="btnCreazioneAccount" text="Creazione Account"></gwt:Button>
+		    </div>
+	    </div>
+	    
+	    </div>
+	    </div>
+	</g:HTMLPanel>
+</ui:UiBinder> 
