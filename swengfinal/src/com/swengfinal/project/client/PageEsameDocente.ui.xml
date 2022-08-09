@@ -1,0 +1,175 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'>
+	<ui:style>
+		
+		#creazioneEsame{
+			
+			display: grid;
+			background-color: #ff958f;
+    		padding: 10px;
+    		row-gap: 20px;
+    		text-align: center;
+
+    		border-radius:10px;
+	
+		}
+		
+		#modificaEsame{
+			
+			display: grid;
+			background-color: #ff958f;
+    		padding: 10px;
+    		row-gap: 20px;
+    		text-align: center;
+
+    		border-radius:10px;
+	
+		}
+		
+		#operazioni{
+			margin-left:5vw;
+		}
+
+		#a1{
+			grid-row: 1;
+			grid-column: 1;
+		}
+		#a2{
+			grid-row: 1;
+			grid-column: 2;
+		}
+
+		#a3{
+			grid-row: 1;
+			grid-column: 3;
+		}
+		#a4{
+			grid-row: 2;
+			grid-column: 1;
+		}
+
+		#a5{
+			grid-row: 2;
+			grid-column: 2;
+		}
+		
+		
+		#button1{
+			grid-row:3;
+			grid-column:1;
+		}
+		#button2{
+			grid-row:3;
+			grid-column:2;
+		}
+		
+		
+	</ui:style>
+	<g:HTMLPanel>
+	<div id="container">
+		<ul id="navbar">
+	       <li  id="Home">
+	       	<gwt:Button ui:field = "btnHome" text="Home"
+                 />
+	       </li>
+	       <li  id="Corso">
+	       	<gwt:Button ui:field = "btnCorso" text="Corso"
+                 />
+	       </li>
+	        <li  id="Esame">
+	       	<gwt:Button ui:field = "btnEsame" text="Esame"
+                 />
+	       </li>
+	        <li  id="Voti">
+	       	<gwt:Button ui:field = "btnVoti" text="Voti"
+                   />
+	       </li>
+	         <li  id="Logout">
+	       	<gwt:Button ui:field = "btnLogout" text="Logout"
+                   />
+	       </li>
+	    </ul>
+	    
+	    <div id="operazioni">
+	    <div>
+	    <h1>Creazione Esame</h1>
+	    
+	    <div id="creazioneEsame">
+	    
+	      <div class="form-group" id="a1">
+	      	<label for="exampleInputEmail1">Corso</label>
+		    <gwt:ListBox ui:field="menuCorsi"></gwt:ListBox>
+		    </div>
+		    
+		    <div id="a2">
+		    <label for="exampleInputEmail1" id="dataEsame">Data</label>
+		    <gwt:TextBox ui:field="txtData"></gwt:TextBox>
+		  </div>
+		  
+		  <div class="form-group" id="a3">
+		    <label for="exampleInputPassword1">Cfu</label>
+		    <gwt:TextBox ui:field="txtCfu"></gwt:TextBox>
+		    </div>
+		    
+		    <div id="a4">
+		    <label for="exampleInputPassword1" id="aula">Aula</label>
+		    <gwt:TextBox ui:field="txtAula"></gwt:TextBox>
+		    </div>
+		  
+		  <div class="form-group" id="a5">
+		   <label for="exampleInputPassword1" id="ora">Ora</label>
+		    <gwt:TextBox ui:field="txtOra"></gwt:TextBox><br></br>
+		  </div>
+		  
+		  <div id="button1">
+		  <gwt:Button ui:field="btnCreazione" text="Creazione Esame"></gwt:Button>
+		  </div>
+		 </div> 
+	    </div>
+	    
+	    <div style="margin-bottom:10vh">
+	    <h1>Modifica/Cancellazione Esame</h1>
+	    
+	    <div id="modificaEsame">
+	    
+	      <div id="a1">
+		    <label for="exampleInputEmail1">Corso</label>
+		    <gwt:ListBox ui:field="menuUpdateCorsi"></gwt:ListBox>
+		  </div>
+		  
+		  <div id="a2">
+		    <label for="exampleInputPassword1">Data</label>
+		    <gwt:TextBox ui:field="txtUpdateData"></gwt:TextBox>
+		    </div>
+		    
+		    <div id="a3">
+		    <label for="exampleInputPassword1">Cfu</label>
+		    <gwt:TextBox ui:field="txtUpdateCfu"></gwt:TextBox>
+		  </div>
+		  
+		  <div class="form-group" id="a4">
+		    <label for="exampleInputPassword1">Aula</label>
+		    <gwt:TextBox ui:field="txtUpdateAula"></gwt:TextBox>
+		    </div>
+		    
+		    <div id="a5">
+		    <label for="exampleInputPassword1">Ora</label>
+		    <gwt:TextBox ui:field="txtUpdateOra"></gwt:TextBox>
+		  </div>
+		  
+		  <div id="button1">
+		  <gwt:Button ui:field="btnUpdate" text="Modifica Esame"></gwt:Button>
+		  </div>
+		  
+		  <div id="button2">
+		   <gwt:Button ui:field="btnCancellazione" text="Cancellazione Esame"></gwt:Button>
+		   </div>
+		  </div>
+		 </div> 
+		   
+	    </div>
+	   </div> 
+	</g:HTMLPanel>
+</ui:UiBinder> 

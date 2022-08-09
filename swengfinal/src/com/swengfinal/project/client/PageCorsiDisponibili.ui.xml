@@ -1,0 +1,70 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+
+		
+		#tabellaCorsi{
+			margin-left:2vw;
+		
+		}
+		
+		#registrazioneCorso {
+			position: absolute;
+			top:22vh;
+			left:30vw;
+		    margin-top: 15vh;
+		    margin-bottom: 4vh;
+		    margin-left: 40vw;
+		    width: 30vw;
+		}
+		
+		.form-group {
+		    margin-bottom: 1rem;
+		    text-align:center;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	<div id="container">
+		<ul id="navbar">
+	       <li  id="Home">
+	       	<gwt:Button ui:field = "btnHome" text="Home"
+                 />
+	       </li>
+	       <li  id="IscrizioneCorso">
+	       	<gwt:Button ui:field = "btnIscrizione" text="Corsi Disponibili"
+                 />
+	       </li>
+	        <li  id="RegistrazioneEsame">
+	       	<gwt:Button ui:field = "btnRegistrazione" text="Registrazione Esame"
+                 />
+	       </li>
+	        <li  id="ShowVoti">
+	       	<gwt:Button ui:field = "btnVoti" text="Voti"
+                   />
+	       </li>
+	         <li  id="Logout">
+	       	<gwt:Button ui:field = "btnLogout" text="Logout"
+                   />
+	       </li>
+	    </ul>
+	    
+	    <div id="tabellaCorsi">
+			<c:CellTable ui:field='cellTable'>
+				
+			</c:CellTable>
+		</div>
+		<form id="registrazioneCorso">
+		  
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Nome Corso</label>
+		    <gwt:ListBox ui:field="txtNomeCorso"></gwt:ListBox>
+		  </div>
+		 
+		  <gwt:Button ui:field="btnCorso" text="Iscrizione"></gwt:Button>
+		</form>
+	</div>	
+	</g:HTMLPanel>
+</ui:UiBinder> 
