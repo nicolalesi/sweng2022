@@ -1,0 +1,83 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gwt = 'urn:import:com.google.gwt.user.client.ui'>
+	 
+	<ui:style>
+
+		label{
+			margin-top: 10px;
+		}
+		
+		#infoUtente{
+			width: 70vw;
+			height: 60vh;
+			border: 2px outset #303030;
+			margin-top: 6vh;
+			margin-left: 5vw;
+			background-color: #ff958f;
+		}
+		
+		#infoUtente p{
+			margin-left: 2vw;
+		}
+		
+		#logout{
+			position:top;
+			float:right;
+		}
+		
+		
+		
+		
+	</ui:style>
+	<g:HTMLPanel>
+	
+	<div id="container">
+		<ul id="navbar">
+	       <li  id="Home">
+	       	<gwt:Button ui:field = "btnHome" text="Home"
+                 />
+	       </li>
+	       <li  id="IscrizioneCorso">
+	       	<gwt:Button ui:field = "btnIscrizione" text="Corsi Disponibili"
+                 />
+	       </li>
+	        <li  id="RegistrazioneEsame">
+	       	<gwt:Button ui:field = "btnRegistrazione" text="Registrazione Esame"
+                 />
+	       </li>
+	        <li  id="ShowVoti">
+	       	<gwt:Button ui:field = "btnVoti" text="Voti"
+                   />
+	       </li>
+	         <li  id="Logout">
+	       	<gwt:Button ui:field = "btnLogout" text="Logout"
+                   />
+	       </li>
+	    </ul>
+	    <div id="infoUtente">
+	    	<p>
+	    		<label><b>Nome: </b></label>
+	    		<gwt:Label ui:field="lblNome" ></gwt:Label>
+	    	</p>
+	    	<p>
+	    		<label><b>Cognome: </b></label>
+	    		<gwt:Label ui:field="lblCognome" ></gwt:Label>
+	    	</p>
+	    	<p>
+	    		<label><b>Mail: </b></label>
+	    		<gwt:Label ui:field="lblMail" ></gwt:Label>
+	    	</p>
+	    	<p>
+	    		<label><b>Corsi iscritti: </b></label>
+	    		<gwt:Label ui:field="lblCorsi" ></gwt:Label>
+	    	</p>
+	    	<p>
+	    		<label><b>Esami iscritti: </b></label>
+	    		<gwt:Label ui:field="lblEsami" ></gwt:Label>
+	    	</p>
+	    </div>
+	  </div>  
+	</g:HTMLPanel>
+</ui:UiBinder> 
