@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="swengfinal/src"/>
+	<classpathentry kind="src" path="swengfinal/test"/>
+	<classpathentry kind="lib" path="swengfinal/junit-jupiter-engine-5.8.2.jar"/>
+	<classpathentry kind="lib" path="swengfinal/mapdb-1.0.0.jar"/>
+	<classpathentry kind="lib" path="swengfinal/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="swengfinal/war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry kind="output" path="swengfinal/test-classes"/>
+</classpath>
