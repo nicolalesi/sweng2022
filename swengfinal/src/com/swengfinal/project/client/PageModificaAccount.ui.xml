@@ -11,8 +11,8 @@
 			background-color: #ff958f;
     		padding: 10px;
     		row-gap: 20px;
-    		
-
+			flex:80%;
+			margin-right:10px;    		
     		border-radius:10px;
 	
 		}
@@ -23,6 +23,7 @@
 		
 		#cancellazioneAccount{
 			display: flex;
+			flex:40%;
 			flex-direction:column;
 			background-color: #ff958f;
     		padding: 10px;
@@ -35,8 +36,9 @@
 		
 		#containerOp{
 			margin-left:2vw;
+			display: flex;
+			padding:20px;
 		}
-		
 		
 	</ui:style>
 	<g:HTMLPanel>
@@ -60,11 +62,13 @@
                    />
 	       </li>
 	    </ul>
+	     
 	<div id="containerOp">  
-	  <div> 
-	    <h1>Modifica Account</h1>
-	    <div id="modificaAccount">
+	  <div id="modificaAccount"> 
+	   
+	    <br></br>
 	    <div>
+	    	<h1>Modifica Account</h1>
 	      <div>
 		   <label for="exampleInputPassword1">Email</label>
 		    <gwt:ListBox ui:field="listUtenti"></gwt:ListBox>
@@ -101,14 +105,13 @@
 		</div>
 		
 		</div>
-	    </div>
+
 	    <br></br>
 	    <br></br>
 	    
-	    <div>
+	    <div id="cancellazioneAccount">
 		    <h1>Elimina Account</h1>
 		    
-		    <div id="cancellazioneAccount">
 		    
 		      <div>
 			    <label for="exampleInputPassword1" id="tipo" >Seleziona l'utente da eliminare</label><br></br>
@@ -121,6 +124,5 @@
 		    </div>
 		 </div> 
 		</div>     
-	 </div>   
 	</g:HTMLPanel>
 </ui:UiBinder> 
