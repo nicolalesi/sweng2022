@@ -8,6 +8,8 @@ import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+//classe che gestisce gli alert 
+
 public class Alert extends DialogBox  {
 
 	private DialogBox messaggio = null;

@@ -19,6 +19,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.swengfinal.project.shared.Amministratore;
 import com.swengfinal.project.shared.Utente;
 
+//componenti java della pagina modifica account visibile da admin
+
 public class PageModificaAccount extends Composite {
 
 	private static PageModificaAccountUiBinder uiBinder = GWT.create(PageModificaAccountUiBinder.class);

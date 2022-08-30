@@ -14,13 +14,12 @@ public class dbVoto {
 
 	public static DB getDB() {
 
-		/* Metodo per creare il database dei voti */
+		/* Crea db dei voti */
 		DB db = DBMaker.newFileDB(new File("dbVoto")).make();
 		return db;
 	}
 
-	/* Metodo per aggiungere un voto al database, prende in input un'arraylist con i dati del voto e restituisce un messaggio 
-	 * dicendoci se l'operazione è andata a buon fine o no */
+	/*Creare un voto, parametro dati del voto */
 	public static String addVoto(ArrayList<String> dati) { 
 		DB db = getDB();
 		BTreeMap<Integer, Voto> voti = db.getTreeMap("VotiMap");
@@ -47,7 +46,7 @@ public class dbVoto {
 		}else return "Errore";
 	}
 
-	/* Metodo per ottenere tutti i voti assegnati ad uno studente, prendendo in input la sua matricola */
+	/* Restituisce tutti i voti assegnati ad uno studente, input la sua matricola */
 	public static ArrayList<Voto> getVoto(String matricola){
 		DB db = getDB();
 		BTreeMap<Integer, Voto> voti = db.getTreeMap("VotiMap");
@@ -62,7 +61,7 @@ public class dbVoto {
 		return votiOutput;
 	}
 
-	/* Metodo per ottenere tutti i voti nel database */
+	/* Restituisce tutti i voti nel database */
 	public static ArrayList<Voto> getVotiAll(){
 		DB db = getDB();
 		BTreeMap<Integer, Voto> voti = db.getTreeMap("VotiMap");
@@ -75,8 +74,8 @@ public class dbVoto {
 		return output;
 	}
 
-	/* Metodo per pubblicare un voto e renderlo disponibile agli studenti, prende in input i valori del voto e restituisce una messaggio
-	 * se l'operazione è andata a buon fine o meno */
+	/*Pubblicare un voto, input i valori del voto */
+	
 	public static String votoPubblicato(ArrayList<String> dati) {
 		DB db = getDB();
 		BTreeMap<Integer, Voto> voti = db.getTreeMap("VotiMap");
@@ -97,7 +96,7 @@ public class dbVoto {
 		return "Successo";
 	}
 
-	/* Metodo per eliminare un voto, prende in input il voto e lo rimuove dal database*/
+	/* Elimina un voto, input voto*/
 	public static String eliminaVoto(Voto voto) {
 		DB db = getDB();
 		BTreeMap<Integer, Voto> voti = db.getTreeMap("VotiMap");
@@ -109,7 +108,7 @@ public class dbVoto {
 		}return("Successo");
 	}
 
-	/* Metodo per ripulire il database e cancellare tutti i voti presenti */
+	/* Cancella tutti i voti presenti */
 	public static void clearDBVoti() {
 		DB db = getDB();
 		BTreeMap<Integer, Voto> voti = db.getTreeMap("VotiMap");

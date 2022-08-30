@@ -18,6 +18,8 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.swengfinal.project.shared.Esame;
 
+//componenti java della pagina voti visibile da docente
+
 public class PageVotiDocente extends Composite {
 
 	private static PageVotiDocenteUiBinder uiBinder = GWT.create(PageVotiDocenteUiBinder.class);

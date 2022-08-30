@@ -23,6 +23,8 @@ import com.swengfinal.project.shared.Segreteria;
 import com.swengfinal.project.shared.Studente;
 import com.swengfinal.project.shared.Utente;
 
+//componenti java del login
+
 public class Login extends Composite {
 	private static LoginUiBinder uiBinder = GWT.create(LoginUiBinder.class);
 

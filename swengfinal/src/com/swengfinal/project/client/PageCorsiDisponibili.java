@@ -23,6 +23,8 @@ import com.swengfinal.project.shared.Voto;
 
 import java.util.ArrayList;
 
+//componenti java della pagina corsi disponibili
+
 public class PageCorsiDisponibili extends Composite{
 	private static ArrayList<Corso> corsiFinal = new ArrayList<Corso>();
 	private static PageCorsiDisponibiliUiBinder uiBinder = GWT.create(PageCorsiDisponibiliUiBinder.class);

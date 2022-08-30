@@ -18,6 +18,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.swengfinal.project.shared.Studente;
 import com.swengfinal.project.shared.Voto;
 
+//componenti java della HomePage segreteria
+
 public class HomePageSegreteria extends Composite {
 
 	private static HomePageSegreteriaUiBinder uiBinder = GWT.create(HomePageSegreteriaUiBinder.class);

@@ -19,6 +19,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.swengfinal.project.shared.Studente;
 import com.swengfinal.project.shared.Utente;
 
+//componenti java della pagina creazione account
+
 public class PageCreazioneAccount extends Composite {
 
 	private static PageCreazioneAccountUiBinder uiBinder = GWT.create(PageCreazioneAccountUiBinder.class);

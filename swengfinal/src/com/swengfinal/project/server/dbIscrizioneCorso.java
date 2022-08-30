@@ -17,8 +17,9 @@ public class dbIscrizioneCorso {
 		return db;
 	}
 
-	/* Metodo che permette ad un utente di iscriversi ad un corso, prende in input la mail dello studente
-	 * e l'id del corso per poi aggiungere l'iscrizione al database */
+	/* Permette ad un utente di iscriversi ad un corso, input la mail dello studente
+	 * e l'id del corso */
+	
 	public static String iscrizioneCorso(String email, Integer idCorso) { 
 		DB db = getDB();
 		BTreeMap<Integer, IscrizioneCorso> iscrizioni = db.getTreeMap("IscrizioniCorso");
@@ -27,19 +28,6 @@ public class dbIscrizioneCorso {
 		boolean found = false;
 
 
-		//	IscrizioneCorso id = new IscrizioneCorso(100,"tmp");
-		/*
-		IscrizioneCorso idSave= new IscrizioneCorso(0,"");
-		for(Entry<Integer, IscrizioneCorso> test : iscrizioni.entrySet()) {
-			if(test.getValue().getMailStudente()=="tmp") {
-				idSave = test.getValue();
-				iscrizioni.remove(test.getKey());
-			}
-		}
-		Integer id = idSave.getIdCorso();
-
-		iscrizioni.put(idSave.getIdCorso()+1, idSave);
-		 */
 		for(Entry<Integer, IscrizioneCorso> test : iscrizioni.entrySet()) {
 			if(idCorso == test.getValue().getIdCorso() && email.equals(test.getValue().getMailStudente())) {
 				found = true;
@@ -59,8 +47,8 @@ public class dbIscrizioneCorso {
 		}
 	}
 
-	/* Metodo per ottenere tutti i corsi a cui uno studente è iscritto, prende in input la 
-	 * mail dello studente e restituisce un arraylist con l'id dei corsi a cui è iscritto*/
+	/*Restituisce tutti i corsi a cui uno studente è iscritto,  input la 
+	 * mail dello studente */
 	public static ArrayList<Integer> getCorsoStudente(String email){
 		DB db = getDB();
 		BTreeMap<Integer, IscrizioneCorso> iscrizioni = db.getTreeMap("IscrizioniCorso");

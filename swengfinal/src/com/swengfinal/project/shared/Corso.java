@@ -3,6 +3,8 @@ package com.swengfinal.project.shared;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+//classe corso
+
 public class Corso implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

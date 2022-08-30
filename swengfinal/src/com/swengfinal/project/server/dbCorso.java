@@ -13,13 +13,13 @@ import java.util.Map.Entry;
 
 public class dbCorso {
 
-	/* Metodo per creare il database dei corsi */
+	/*Crea db corso */
 	private static DB getDB() {
 		DB db = DBMaker.newFileDB(new File("dbCorso")).make();
 		return db;
 	}
 
-	/* Metodo per ottenere l'id del corso se presente nel database, prendendo in input il nome del corso */
+	/* Restituisce id del corso, passando come parametro il nome del corso */
 	private static int posizioneCorso(String nomeCorso) {
 		DB db = getDB();
 		BTreeMap<Integer, Corso> corsi = db.getTreeMap("CorsiMap");
@@ -31,8 +31,7 @@ public class dbCorso {
 		return 0;
 	}
 
-	/* Metodo per creare un corso e inserirlo nel database, prende in input i dati del corso e restituisce una stringa
-	 * se l'operazione è andata a buon fine
+	/* Crea corso, input i dati del corso, lo aggiunge nel db
 	 */
 	public static String creazioneCorso(ArrayList<String> dati) { 
 		DB db = getDB();
@@ -54,8 +53,7 @@ public class dbCorso {
 		return "Successo";			
 	}
 
-	/* Metodo per modificare i dati del corso, prende in input i nuovi dati e il nome del corso, rimuove dal database il corso e lo
-	 * riaggiunge con i nuovi dati aggiornati */
+	/* Modifica i dati del corso, prende in input i nuovi dati e il nome del corso*/
 	public static String modificaCorso(ArrayList<String> dati, String nomeCorso) {
 		DB db = getDB();
 		BTreeMap<Integer, Corso> corsi = db.getTreeMap("CorsiMap");
@@ -88,7 +86,7 @@ public class dbCorso {
 
 	}
 
-	/* Metodo per rimuovere un corso, prende in input il nome del corso e, se è presente nel database, lo rimuove */
+	/* Rimuove un corso, prende in input il nome del corso  */
 	public static String deleteCorso(String nomeCorso) {
 		DB db = getDB();
 		BTreeMap<Integer, Corso> corsi = db.getTreeMap("CorsiMap");
@@ -101,7 +99,7 @@ public class dbCorso {
 		return "Successo";
 	}
 	
-	/* Metodo che restituisce tutti i corsi a cui uno studento è iscritto, prendendo in input la sua mail */
+	/* Restituisce tutti i corsi a cui uno studento è iscritto, input mail studente */
 	public static ArrayList<Corso> getAllCorso(String email) {
 		DB db = getDB();
 		BTreeMap<Integer, Corso> corsi = db.getTreeMap("CorsiMap");
@@ -115,7 +113,7 @@ public class dbCorso {
 		return corsiOutput;
 	}
 
-	/* Metodo per ottenere tutti i corsi presenti nel database */
+	/* Restituisce tutti i corsi nel db */
 	public static ArrayList<Corso> getCorsi(){
 		DB db = getDB();
 		BTreeMap<Integer, Corso> corsi = db.getTreeMap("CorsiMap");

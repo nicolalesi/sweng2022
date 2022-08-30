@@ -15,6 +15,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
+//form per registrazione studenti
+
 public class FormStudente extends Composite {
 
 	private static FormStudenteUiBinder uiBinder = GWT.create(FormStudenteUiBinder.class);

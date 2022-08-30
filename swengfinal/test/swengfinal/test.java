@@ -13,9 +13,8 @@ import static org.junit.Assert.*;
 import com.swengfinal.project.shared.Studente;
 
 /*
- * Ogni volta che eseguiamo i test, resettiamo i database per lavorare su nuovi dati.
- * Quindi se si avvia questa pagina, si perdereranno tutti i dati memorizzati nel database. 
- * 
+ * Classe che gestisce i test
+ * finali dell'applicativo web, per verificare se registrazione, login, funzionano correttamente
  */
 
 

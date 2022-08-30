@@ -12,6 +12,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.uibinder.client.UiField;
 
+//componenti java della HomePage
+
 public class HomePage extends Composite {
 
 	private static HomePageUiBinder uiBinder = GWT.create(HomePageUiBinder.class);

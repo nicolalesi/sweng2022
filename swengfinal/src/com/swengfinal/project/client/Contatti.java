@@ -12,6 +12,8 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 
+//classe che gestisce ciò che è visibile dalla schermata contatti 
+
 public class Contatti extends Composite {
 
 	private static ContattiUiBinder uiBinder = GWT.create(ContattiUiBinder.class);

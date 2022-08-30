@@ -22,6 +22,7 @@ import com.swengfinal.project.shared.Voto;
 import com.swengfinal.project.shared.Studente;
 import com.swengfinal.project.shared.Utente;
 
+//componenti java della pagina voti visbile da segreteria
 
 public class PageVoti extends Composite {
 
@@ -84,26 +85,6 @@ public class PageVoti extends Composite {
 		}catch(Error e){
 		};
 	}
-	/*
-	public void getVoti() {
-		try {
-			final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
-
-			greetingService.getVoto(Account.matricola, new AsyncCallback<ArrayList<Voto>>() {
-				public void onFailure(Throwable caught) {
-					Window.alert("ERRORE!");
-				}
-				@Override
-				public void onSuccess(ArrayList<Voto> votiOutput) {
-					votiFinal.clear();
-					for(int i=0;i<votiOutput.size();i++) {
-						votiFinal.add(votiOutput.get(i));
-					}
-				}		
-			});
-		}catch(Error e){
-			};
-	}*/
 
 	public void addTable() {
 

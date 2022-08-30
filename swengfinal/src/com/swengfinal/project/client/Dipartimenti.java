@@ -12,6 +12,8 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 
+//classe che gestisce ciò che è visibile dalla schermata dipartimenti 
+
 public class Dipartimenti extends Composite {
 
 	private static DipartimentiUiBinder uiBinder = GWT.create(DipartimentiUiBinder.class);

@@ -19,6 +19,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.swengfinal.project.shared.Studente;
 import com.swengfinal.project.shared.Voto;
 
+//componenti java della pagina pubblica voto visibile da segreteria
+
 public class SegreteriaPubblicaVoto extends Composite {
 
 	private static SegreteriaPubblicaVotoUiBinder uiBinder = GWT.create(SegreteriaPubblicaVotoUiBinder.class);

@@ -21,6 +21,8 @@ import com.swengfinal.project.shared.Corso;
 import com.swengfinal.project.shared.Esame;
 import com.swengfinal.project.shared.Voto;
 
+//componenti java della pagina registrazione esame visibile da studente
+
 public class RegistrazioneEsame extends Composite {
 
 	private static RegistrazioneEsameUiBinder uiBinder = GWT.create(RegistrazioneEsameUiBinder.class);

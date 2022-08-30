@@ -20,6 +20,8 @@ import com.swengfinal.project.shared.Corso;
 import com.swengfinal.project.shared.Esame;
 import com.swengfinal.project.shared.Utente;
 
+//componenti java della HomePage docente
+
 public class HomePageDocente extends Composite {
 
 	private static HomePageDocenteUiBinder uiBinder = GWT.create(HomePageDocenteUiBinder.class);

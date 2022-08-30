@@ -2,8 +2,7 @@ package com.swengfinal.project.client;
 
 
 /*
- *Classe utilizzata per memorizzare l'utente attualmente attivo sul sito
- * */
+ *Classe contenente le proprietà necessarie per l'account* */
 public class Account {
 
 	static String email="";

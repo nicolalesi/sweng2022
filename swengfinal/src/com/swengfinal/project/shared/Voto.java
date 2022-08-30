@@ -2,6 +2,8 @@ package com.swengfinal.project.shared;
 
 import java.io.Serializable;
 
+//classe voto
+
 public class Voto implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

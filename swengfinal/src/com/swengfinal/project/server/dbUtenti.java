@@ -17,11 +17,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 
-/* db.getAll().clear()	per pulire il db */
+/* db.getAll().clear()	pulire il db */
 
 public class dbUtenti {
 
-	/* Metodo per creare un nuovo database per gli utenti */
+	/*Crea db utenti */
 	private static DB getDB() {
 		DB db = DBMaker.newFileDB(new File("dbUtenti")).make();
 		return db;
@@ -37,28 +37,9 @@ public class dbUtenti {
 			}
 		} return find;
 	}
-	/*
-	private static boolean checkMatricola(String matricola) {
-		boolean find = false;
-		DB db = getDB();
-		BTreeMap<String,Utente> Users = db.getTreeMap("UtentiMap");
-		ArrayList<Studente> studenti = new ArrayList<Studente>();
-		for(Entry<String,Utente> test : Users.entrySet()) {
-			if(test.getValue() instanceof Studente) {
-				studenti.add((Studente) test.getValue());
-			}
-		}
-		for(int i=0; i<studenti.size(); i++) {
-			if(studenti.get(i).equals(matricola)) {
-				find = true;
-			}
-		}
-		return find;
-	}*/
 
 	/**
-	 * Metodo per la registrazione dello studente, prende in input un ArrayList con i dati dello studente
-	 * e restituisce un messaggio se l'operazione è andata a buon fine o meno
+	 * Registrazione dello studente, input ArrayList con i dati dello studente
 	 **/
 	public static String registrazioneStudente(ArrayList<String> dati) {
 		DB db = getDB();
@@ -83,9 +64,9 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo per la registrazione del docente, prende in input un ArrayList con i dati del docente
-	 * e restituisce un messaggio se l'operazione è andata a buon fine o meno
+	 * Registrazione docente, input un ArrayList con i dati del docente
 	 **/
+	
 	public static String registrazioneDocente(ArrayList<String> dati) {
 		DB db = getDB();
 		BTreeMap<String,Utente> Users;
@@ -107,9 +88,9 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo per la registrazione dell'admin, prende in input un ArrayList con i dati dell'admin
-	 * e restituisce un messaggio se l'operazione è andata a buon fine o meno
+	 *Registrazione admin, prende in input un ArrayList con i dati dell'admin
 	 **/
+	
 	public static String registrazioneAdmin(ArrayList<String> dati) {
 		DB db = getDB();
 		BTreeMap<String,Utente> Users;
@@ -124,15 +105,13 @@ public class dbUtenti {
 			Users.put(user.getEmail(),user);
 			db.commit();
 			db.close();
-			//Alert gg = new Alert("Utente registrato con mail: " + user.getEmail() + " e password: " + user.getPw());
 			return "Registrazione completata";
 		}
 		else return "Errore";
 	}
 
 	/**
-	 * Metodo per la registrazione della segretaria, prende in input un ArrayList con i dati
-	 * dell'account della segreteria e restituisce un messaggio se l'operazione è andata a buon fine o meno
+	 * Registrazione della segretaria, input un ArrayList con i dati
 	 **/
 	public static String registrazioneSegreteria(ArrayList<String> dati) {
 		DB db = getDB();
@@ -155,8 +134,7 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo per la gestione del login, prende in input la mail e la password scritti nel form
-	 * e restituisce un oggetto di tipo utente se l'operazione è andata a buon fine o meno
+	 * Gestione del login, in input la mail e la password scritti nel form
 	 **/
 	public static Utente login(String email, String password) throws IllegalArgumentException{
 
@@ -171,7 +149,7 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo che elimina l'utente, la cui mail corrisponde a quella passata input
+	 * Elimina l'utente, la cui mail corrisponde a quella passata input
 	 **/
 	public static String deleteUtente(String email) {
 		DB db = getDB();
@@ -185,8 +163,7 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo che restituisce le informazioni dell'utente, verificando la mail passata in input restituisce 
-	 * i dati dell'utente se l'operazione è andata a buon fine
+	 * Restituisce le informazioni dell'utente, verificando la mail passata in input 
 	 **/
 	public static String getInfoUtente(String email) {
 		DB db = getDB();
@@ -202,7 +179,7 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo che restituisce un utente la cui mail corrisponde a quella passata in input
+	 * Restituisce un utente con mail in input
 	 **/
 	public static Utente getUtente(String email) {
 		DB db = getDB();
@@ -213,8 +190,8 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo che restituisce le informazioni dell'utente, verificando la mail passata in input restituisce 
-	 * i dati dell'utente se l'operazione è andata a buon fine
+	 * Restituisce le informazioni dell'utente, verificando la mail passata in input 
+	 *
 	 **/
 	public static ArrayList<Studente> getStudenti(){
 		DB db = getDB();
@@ -229,7 +206,7 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo che restituisce una lista con tutti i docenti registrati
+	 * Restituisce una lista con tutti i docenti registrati
 	 **/
 	public static ArrayList<Docente> getDocenti(){
 		DB db = getDB();
@@ -245,7 +222,7 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo che restituisce una lista con tutti i docenti registrati
+	 * Restituisce una lista con tutti i docenti registrati
 	 **/
 	public static ArrayList<Utente> getUtentiAll(){
 		DB db = getDB();
@@ -256,7 +233,7 @@ public class dbUtenti {
 		}
 		return output;
 	}
-	/* Metodo usato in fase di testing per ottenere i valori del db */
+	/* Usato in fase di testing per ottenere i valori del db */
 	public static String getDatabase() {
 		DB db = getDB();
 		String s = "";
@@ -268,7 +245,7 @@ public class dbUtenti {
 	}
 
 	/**
-	 * Metodo si occupa di modificare l'utente, la cui mail corrisponde a quella passata input e insieme ai dati da aggiornare
+	 * Modificare l'utente, la cui mail corrisponde a quella passata input
 	 **/
 	public static String modificaUtente(ArrayList<String> dati, String email) {
 		DB db = getDB();

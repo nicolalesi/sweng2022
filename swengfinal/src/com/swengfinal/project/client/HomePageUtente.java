@@ -21,6 +21,8 @@ import com.swengfinal.project.shared.Esame;
 import com.swengfinal.project.shared.Utente;
 import com.swengfinal.project.shared.Voto;
 
+//componenti java della HomePage utente
+
 public class HomePageUtente extends Composite {
 
 	private static HomePageUtenteUiBinder uiBinder = GWT.create(HomePageUtenteUiBinder.class);

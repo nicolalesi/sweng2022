@@ -19,6 +19,8 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.swengfinal.project.shared.Corso;
 
+//componenti java della pagina corso docente
+
 public class PageCorsoDocente extends Composite {
 
 	static int idCorso = 100;

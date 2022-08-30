@@ -14,6 +14,8 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.Composite;
 
+//componenti java della registrazione
+
 public class Registrazione extends Composite {
 
 	private static RegistrazioneUiBinder uiBinder = GWT.create(RegistrazioneUiBinder.class);

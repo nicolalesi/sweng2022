@@ -13,19 +13,17 @@ import com.swengfinal.project.shared.Esame;
 
 public class dbEsame {
 	
-	/* Metodo per creare il database degli esami */
+	/*Crea db esami */
 	private static DB getDB() {
 		DB db = DBMaker.newFileDB(new File("dbEsame")).make();
 		return db;
 	}
 	
-	/* Metodo per creare un esame e inserirlo nel database, prende in input i dati dell'esame e l'id del corso corrispondente, restituisce una stringa se
-	 * l'operazione è andata a buon fine o meno */
+	/*Creare un esame, parametro dati dell'esame e l'id del corso corrispondente */
 	public static String creazioneEsame(ArrayList<String> dati, int idCorso) { 
 		DB db = getDB();
 		BTreeMap<Integer, Esame> esami = db.getTreeMap("EsamiMap");
 		boolean found = false;
-		//if(!checkCorso(Integer.parseInt(dati.get(0)))) {
 			Esame esame = new Esame(
 					esami.size(), 					// idEsame
 					idCorso,						// idCorso
@@ -51,8 +49,8 @@ public class dbEsame {
 			}else return "Errore";
 		}
 
-	/* Metodo per modificare i dati di un esame, prende in input i dati modificati e l'id del corso corrispondente,
-	 * rimuove dal database l'esame e lo riaggiunge con i nuovi valori modificati*/
+	/* Modifica i dati dell'esame, prende in input i nuovi dati e id del corso*/
+	
 	public static String modificaEsame(ArrayList<String> dati, int idCorso) {
 		DB db = getDB();
 		Esame esame = new Esame();
@@ -83,7 +81,7 @@ public class dbEsame {
 		
 	}
 	
-	/* Metodo per eliminare un esame, prende in input l'id del corso corrispondente e rimuove l'esame con corrispondente id corso*/
+	/* Rimuove un esame, prende in input id del corso e rimuove il relativo esame  */
 	public static String deleteEsame(int idCorso) {
 		DB db = getDB();
 
@@ -107,8 +105,8 @@ public class dbEsame {
 		}
 	}
 	
-	/* Metodo per restituire tutti gli esami tenuti da un docente, prende in input la sua mail e restituisce tutti 
-	 * gli esami che egli ha creato */
+	/* Restituisce tutti gli esami tenuti da un docente, input mail e restituisce tutti 
+	 * gli esami che ha creato */
 	public static ArrayList<Esame> getAllEsame(String email)
 	{
 		DB db = getDB();
@@ -123,7 +121,7 @@ public class dbEsame {
 		return esamiOutput;
 	}
 	
-	/* Metodo per ottenere tutti gli esami presenti nel database */
+	/* Restituisce tutti gli esami presenti nel database */
 	public static ArrayList<Esame> getEsami(){
 		DB db = getDB();
 		BTreeMap<Integer, Esame> esami = db.getTreeMap("EsamiMap");
@@ -135,7 +133,7 @@ public class dbEsame {
 		return esamiAll;
 	}
 	
-	/* Metodo per ripulire il database e quindi cancellare tutti gli esami presenti */
+	/* Cancella tutti gli esami presenti */
 	public static void clearDBEsami() {
 		DB db = getDB();
 		BTreeMap<Integer, Esame> esami = db.getTreeMap("EsamiMap");

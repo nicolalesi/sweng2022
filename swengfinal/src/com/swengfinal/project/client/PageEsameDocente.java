@@ -20,6 +20,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.swengfinal.project.shared.Corso;
 import com.swengfinal.project.shared.Esame;
 
+//componenti java della pagina esame visibile da docente
+
 public class PageEsameDocente extends Composite {
 
 	private static PageEsameDocenteUiBinder uiBinder = GWT.create(PageEsameDocenteUiBinder.class);

@@ -2,6 +2,8 @@ package com.swengfinal.project.shared;
 
 import java.io.Serializable;
 
+//classe iscrizione esame
+
 public class IscrizioneEsame implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
